@@ -1,0 +1,36 @@
+{
+  "name": "@zxdvd/dsh-plugins",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Independent plugins for DeepSeek Harness",
+  "type": "module",
+  "engines": {
+    "node": ">=22"
+  },
+  "exports": {
+    "./web-search": "./plugins/web-search/index.js",
+    "./package.json": "./package.json",
+    "./cordis.patch.yml": "./cordis.patch.yml"
+  },
+  "files": [
+    "plugins/",
+    "cordis.patch.yml",
+    "docs/",
+    "README.md",
+    "LICENSE"
+  ],
+  "scripts": {
+    "test": "node --test test/*.test.js"
+  },
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    }
+  },
+  "license": "MIT",
+  "dependencies": {
+    "@deepseek-ai/dsh-credentials": "0.2.1-rc.3",
+    "@deepseek-ai/dsh-web": "0.2.1-rc.3",
+    "@deepseek-ai/schemastery": "3.18.5"
+  }
+}

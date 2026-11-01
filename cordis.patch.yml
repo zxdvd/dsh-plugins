@@ -1,0 +1,7 @@
+- insert:
+    - id: web-search-responses
+      name: '@zxdvd/dsh-plugins/web-search'
+- id: web
+  config:
+    searchProvider: responses
+    fetchProvider: http
